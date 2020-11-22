@@ -1,0 +1,38 @@
+.material-icons{
+    align-items: center;
+}
+.pointer{
+    cursor: pointer;
+}
+label {
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+ }
+ 
+ #upload-photo {
+    opacity: 0;
+    position: absolute;
+ }
+
+ .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .header {  
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .html-header {
+    margin: 15px 0 5px;
+  }
+  
+  .html {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    min-height: 20px;
+    max-height: 10rem;
+    overflow: auto;
+  }

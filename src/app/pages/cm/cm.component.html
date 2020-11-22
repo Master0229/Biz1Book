@@ -1,0 +1,450 @@
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card" *ngIf="!show">
+        <div class=" card-header">
+          <h4 class=" card-title">Companies:</h4>
+        </div>
+        <div class=" card-body">
+          <div class=" table-responsive">
+            <table class=" table tablesorter" id="">
+              <thead class=" text-primary">
+                <tr>
+                  <th>Name</th>
+                  <th>Country</th>
+                  <th>Area</th>
+                  <th class=" text-center">Payments</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dakota Rice</td>
+                  <td>Niger</td>
+                  <td>Oud-Turnhout</td>
+                  <td class=" text-center">$36,738</td>
+                  <td>
+                    <span class="material-icons pointer" (click)="show = !show">
+                      error
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Minerva Hooper</td>
+                  <td>CuraÃ§ao</td>
+                  <td>Sinaai-Waas</td>
+                  <td class=" text-center">$23,789</td>
+                  <td>
+                    <span class="material-icons pointer" (click)="show = !show" >
+                      error
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sage Rodriguez</td>
+                  <td>Netherlands</td>
+                  <td>Baileux</td>
+                  <td class=" text-center">$56,142</td>
+                  <td>
+                    <span class="material-icons pointer" (click)="show = !show">
+                      error
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Philip Chaney</td>
+                  <td>Korea, South</td>
+                  <td>Overland Park</td>
+                  <td class=" text-center">$38,735</td>
+                  <td>
+                    <span class="material-icons pointer" (click)="show = !show">
+                      error
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Doris Greene</td>
+                  <td>Malawi</td>
+                  <td>Feldkirchen in KÃ¤rnten</td>
+                  <td class=" text-center">$63,542</td>
+                  <td>
+                    <span class="material-icons pointer" (click)="show = !show">
+                      error
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mason Porter</td>
+                  <td>Chile</td>
+                  <td>Gloucester</td>
+                  <td class=" text-center">$78,615</td>
+                  <td>
+                    <span class="material-icons pointer" (click)="show = !show">
+                      error
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jon Porter</td>
+                  <td>Portugal</td>
+                  <td>Gloucester</td>
+                  <td class=" text-center">$98,615</td>
+                  <td>
+                    <span class="material-icons pointer" (click)="show = !show">
+                      error
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+
+      <ng-container *ngIf="show">
+
+        <div class=" row">
+          <div class=" col-md-8">
+            <div class=" card">
+              <div class=" card-header" style="text-align: right;"><button mat-icon-button color="primary"
+                  aria-label="edit icon" style="align-self: center;" (click)="editprofile = !editprofile">
+                  <span class="material-icons">
+                    create
+                  </span>
+                </button></div>
+
+              <div class=" card-body">
+                <form>
+                  <div class=" row">
+                    <div class=" col-md-5 pr-md-1">
+                      <div class=" form-group">
+                        <label> Company</label>
+                        <input [disabled]="editprofile" class=" form-control" placeholder="Company" type="text"
+                          value="Creative Code Inc." />
+                      </div>
+                    </div>
+                    <div class=" col-md-3 px-md-1">
+                      <div class=" form-group">
+                        <!--  <label> Username </label>
+                    <input
+                      class=" form-control"
+                      placeholder="Username"
+                      type="text"
+                      value="michael23"
+                    />-->
+                      </div>
+                    </div>
+                    <div class=" col-md-4 pl-md-1">
+                      <div class=" form-group">
+                        <!-- <label for="exampleInputEmail1"> Email address </label>
+                    <input
+                      class=" form-control"
+                      placeholder="mike@email.com"
+                      type="email"
+                    />-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" row">
+                    <div class=" col-md-6 pr-md-1">
+                      <div class=" form-group">
+                        <label> Name </label>
+                        <input [disabled]="editprofile" class=" form-control" placeholder="Company" type="text"
+                          value="Mike" />
+                      </div>
+                    </div>
+                    <div class=" col-md-6 pl-md-1">
+                      <div class=" form-group">
+                        <!-- <label> Last Name </label>
+                    <input
+                      class=" form-control"
+                      placeholder="Last Name"
+                      type="text"
+                      value="Andrew"
+                    />-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" row">
+                    <div class=" col-md-12">
+                      <div class=" form-group">
+                        <label> Address </label>
+                        <input [disabled]="editprofile" class=" form-control" placeholder="Home Address" type="text"
+                          value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" row">
+                    <div class=" col-md-4 pr-md-1">
+                      <div class=" form-group">
+                        <label> City </label>
+                        <input [disabled]="editprofile" class=" form-control" placeholder="City" type="text"
+                          value="Mike" />
+                      </div>
+                    </div>
+                    <div class=" col-md-4 px-md-1">
+                      <div class=" form-group">
+                        <label> Country </label>
+                        <input [disabled]="editprofile" class=" form-control" placeholder="Country" type="text"
+                          value="Andrew" />
+                      </div>
+                    </div>
+                    <div class=" col-md-4 pl-md-1">
+                      <div class=" form-group">
+                        <label> Postal Code </label>
+                        <input [disabled]="editprofile" class=" form-control" placeholder="ZIP Code" type="number" />
+                      </div>
+                    </div>
+
+
+                    <div class=" col-md-4 pr-md-1">
+                      <div class=" form-group">
+                        <label> Joining Date </label>
+                        <input [disabled]="editprofile" class=" form-control" placeholder="City" type="text"
+                          value="Mike" />
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                  <div class=" row">
+                    <div class=" col-md-8">
+                      <div class=" form-group">
+                        <label> Stores: </label>
+                        <div class="cmactive">
+                          <button mat-button (click)="openDialogWithTemplateRef(activeDialog)"
+                            style=" margin-left: 5%; ">Active</button>
+
+                          <ng-template #activeDialog>
+                            <h2 matDialogTitle>ACTIVE STORES!
+                              <button mat-button matDialogClose color="primary" style="float: right;"> <span
+                                  class="material-icons">
+                                  disabled_by_default
+                                </span></button>
+
+                            </h2>
+                            <mat-list role="list">
+                              <mat-list-item role="listitem">Karapakkam</mat-list-item>
+                              <mat-list-item role="listitem">Medavakkam</mat-list-item>
+                              <mat-list-item role="listitem">Kovilambakkam</mat-list-item>
+                            </mat-list>
+                            <mat-dialog-actions align="end">
+                              <button mat-button color="accent"
+                                (click)="openDialogWithTemplateRef(secondDialog)">Enter</button>
+                            </mat-dialog-actions>
+                          </ng-template>
+
+
+
+
+                        </div>
+
+
+
+                        <!--Company Management  -> Non Active-->
+                        <div class="cmnonactive">
+                          <button mat-button (click)="openDialogWithTemplateRef(nonactiveDialog)"
+                            style=" margin-left: 5%; ">Non Active</button>
+
+                          <ng-template #nonactiveDialog>
+                            <h2 matDialogTitle> NON-ACTIVE STORES!
+                              <button mat-button matDialogClose color="primary" style="float: right;"> <span
+                                  class="material-icons">
+                                  disabled_by_default
+                                </span></button>
+
+                            </h2>
+                            <mat-list role="list">
+                              <mat-list-item role="listitem">Shozhinganalur</mat-list-item>
+                              <mat-list-item role="listitem">Madipakkam</mat-list-item>
+                              <mat-list-item role="listitem">Kizhkattalai</mat-list-item>
+                            </mat-list>
+                            <mat-dialog-actions align="end">
+                              <button mat-button color="accent"
+                                (click)="openDialogWithTemplateRef(secondDialog)">Enter</button>
+                            </mat-dialog-actions>
+                          </ng-template>
+
+                        </div>
+
+
+
+                        <!--Company Management -> Credentials-->
+                        <button mat-button (click)="openDialogWithTemplateRef(myDialog)" style=" margin-left: 5%; ">Show
+                          Credentials</button>
+
+                        <ng-template #myDialog>
+                          <h2 matDialogTitle>PIN!
+                            <button mat-button matDialogClose color="primary" style="float: right;"> <span
+                                class="material-icons">
+                                disabled_by_default
+                              </span></button>
+
+                          </h2>
+                          <mat-form-field appearance="Outline">
+                            <mat-label>Enter your PIN!!</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'">
+                            <mat-hint>Only 4 Digit</mat-hint>
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                              [attr.aria-pressed]="hide">
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+                            </button>
+                          </mat-form-field>
+                          <mat-dialog-actions align="end">
+                            <button mat-button color="accent"
+                              (click)="openDialogWithTemplateRef(secondDialog)">Enter</button>
+                          </mat-dialog-actions>
+                        </ng-template>
+
+
+                        <ng-template #secondDialog>
+
+                          <h2 matDialogTitle>Credentials!</h2>
+
+
+
+                          <mat-dialog-content>
+                            <label for="email" style="padding-right: 50px;">E-Mail:</label>
+                            <input type="text" id="email" value="FruitsandBakes@gmail.com" readonly>
+                            <br>
+                            <br>
+                            <label for="pwd" style="padding-right: 27px;">Password:</label>
+                            <input type="text" id="pwd" value="Password@1" readonly>
+                          </mat-dialog-content>
+                          <mat-dialog-actions align="end">
+                            <button mat-button matDialogClose color="primary" (click)="closealldialog()">Close</button>
+                          </mat-dialog-actions>
+
+                        </ng-template>
+
+
+
+                        <ng-template #firstDialogTemplate>
+                          <h2>1. This is the first template</h2>
+                          <app-dialog-button color="primary" (click)="changeDialogTemplate(secondDialogTemplate)">Go to
+                            Second Teamplate</app-dialog-button>
+                        </ng-template>
+
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div>
+                <div class=" form-group">
+
+
+                  <mat-accordion style="margin-left: 5%;">
+                    <mat-expansion-panel hideToggle>
+
+
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Subscription details
+                        </mat-panel-title>
+                        <mat-panel-description>
+                          Basic Plan {{panelOpenState ? 'open' : 'closed'}}
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <p>5000 per year <br>
+                        Expire Date: DD/MM/YYYY</p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+
+                </div>
+              </div>
+
+
+              <div class=" card-footer">
+
+                <button class=" btn btn-fill btn-danger" type="submit" (click)="toggle()" id="bt">
+                  {{buttonName}}
+                </button>
+                <button class=" btn btn-fill btn-danger" type="submit" id="bt" style="margin-left: 10%;">
+                  Save
+                </button>
+
+
+              </div>
+            </div>
+          </div>
+          <div class=" col-md-4">
+            <div class=" card card-user">
+              <div class=" card-body">
+                <p class=" card-text"></p>
+                <div class=" author">
+                  <div class=" block block-one"></div>
+                  <div class=" block block-two"></div>
+                  <div class=" block block-three"></div>
+                  <div class=" block block-four"></div>
+                  <a href="javascript:void(0)">
+                    <!--  <img alt="..." class=" avatar" src="assets/img/emilyz.jpg" />-->
+
+
+
+
+                    <!--Company Management -> Company LOGO UPLOAD-->
+                    <div class="cmprofile">
+
+
+                      <img [src]="url" height="200" width="200">
+
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+
+                      <label for="upload-photo">
+                        <span class="material-icons">
+                          add_photo_alternate
+                        </span></label>
+                      <input type="file" (change)="onSelectFile($event)" name="photo" id="upload-photo" />
+
+
+
+
+                    </div>
+
+                    <!-- <h5 class=" title">Mike Andrew</h5>-->
+                  </a>
+                  <!--<p class=" description">Ceo/Co-Founder</p>-->
+                </div>
+
+              </div>
+              <!--<div class=" card-footer">
+                <div class=" button-container">
+                  <button class=" btn btn-icon btn-round btn-facebook" href="javascript:void(0)">
+                    <i class=" fab fa-facebook"> </i>
+                  </button>
+                  <button class=" btn btn-icon btn-round btn-twitter" href="javascript:void(0)">
+                    <i class=" fab fa-twitter"> </i>
+                  </button>
+                  <button class=" btn btn-icon btn-round btn-google" href="javascript:void(0)">
+                    <i class=" fab fa-google-plus"> </i>
+                  </button>
+                </div>
+              </div>-->
+            </div>
+          </div>
+        </div>
+        <div style="margin: 0 auto;text-align: left;">
+
+          <!---->
+
+        </div>
+        <br>
+
+      </ng-container>
+    </div>
+  </div>
+</div>

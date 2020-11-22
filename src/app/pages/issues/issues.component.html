@@ -1,0 +1,221 @@
+<div class=" content">
+    <div class=" row">
+        <div class=" col-md-12">
+            <div class=" card" *ngIf="!show">
+                <div class=" card-header">
+                    <h4 class=" card-title">Issues Table</h4>
+                </div>
+                <div class=" card-body">
+                    <div class=" table-responsive">
+                        <table class=" table tablesorter" id="">
+                            <thead class=" text-primary">
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>Issues</th>
+                                    <th>Severity</th>
+                                    <th>Reported By</th>
+                                    <th>Reported @</th>
+                                    <th>Assigned To</th>
+                                    <th>Company</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let issue of issues">
+                                    <td>{{issue.App.Name}}</td>
+                                    <td>{{issue.Description}}</td>
+                                    <td>
+                                        <span class="material-icons" style="color: red;">
+                                            privacy_tip
+                                        </span>High
+                                    </td>
+                                    <td>{{issue.Reported_By}}</td>
+                                    <td>{{issue.Reported_at | date}}</td>
+                                    <td>{{issue.Resolved_By}}</td>
+                                    <td>{{issue.Reporting_Company}}</td>
+                                    <td><button mat-icon-button (click)="show = !show">
+                                            <mat-icon>
+                                                open_in_new
+                                            </mat-icon>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>Stock Update</td>
+                                    <td>Error</td>
+                                    <td>
+                                        <span class="material-icons" style="color: orange;">
+                                            privacy_tip
+                                        </span>Medium
+                                    </td>
+                                    <td>Sanjay</td>
+                                    <td>DD/MM/YYYy - 00.00 AM/PM</td>
+                                    <td>Master</td>
+                                    <td>16 Tons</td>
+                                    <td><button mat-icon-button (click)="show = !show">
+                                            <mat-icon>
+                                                open_in_new
+                                            </mat-icon>
+                                        </button>
+                                </tr>
+                                <tr>
+                                    <td>FB Accounts</td>
+                                    <td>Login Error</td>
+                                    <td>
+                                        <span class="material-icons" style="color: grey;">
+                                            privacy_tip
+                                        </span>Low
+                                    </td>
+                                    <td>DSK</td>
+                                    <td>DD/MM/YYYy - 00.00 AM/PM</td>
+                                    <td>Prince</td>
+                                    <td>Fb Cakes N Sweets</td>
+                                    <td><button mat-icon-button (click)="show = !show">
+                                            <mat-icon>
+                                                open_in_new
+                                            </mat-icon>
+                                        </button>
+                                </tr> -->
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor> -->
+
+        <div class="info col-xl-12">
+
+            <ng-container *ngIf="show">
+
+                <div class=" row">
+                    <div class=" col-md-12">
+                        <div class=" card">
+                            <div class=" card-header" style="text-align: right;"><button mat-icon-button color="primary"
+                                    aria-label="edit icon" style="align-self: center;"
+                                    (click)="editprofile = !editprofile">
+                                    <span class="material-icons">
+                                        create
+                                    </span>
+                                </button></div>
+
+                            <div class=" card-body">
+                                <form>
+                                    <div class=" row">
+                                        <div class=" col-md-3    pr-md-1">
+                                            <div class=" form-group">
+                                                <label> Project Name:</label>
+                                                <input [disabled]="editprofile" class=" form-control" placeholder=""
+                                                    type="text" value="" />
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-3 px-md-1">
+                                            <div class=" form-group">
+                                                <label> Severity: </label>
+                                                <br>
+
+                                                <span class="material-icons" style="color: red;">
+                                                    privacy_tip
+                                                </span>
+                                                <span>High </span>
+
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-4 pl-md-1">
+                                            <div class=" form-group">
+                                                <!-- <label for="exampleInputEmail1"> Email address </label>
+                      <input
+                        class=" form-control"
+                        placeholder="mike@email.com"
+                        type="email"
+                      />-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" row">
+
+
+                                    </div>
+
+
+
+                                    <div class=" row">
+                                        <h5 class="html-header">HTML Output</h5>
+                                        <div class="html">
+                                            {{ htmlContent }}
+                                        </div>
+
+                                        <div class=" card-footer">
+                                            <button class=" btn btn-fill btn-danger" type="submit" id="bt"
+                                                style="margin-left: 10%;">
+                                                Proof
+                                            </button>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Assign to ... </mat-label>
+                                        <mat-select>
+                                            <mat-option value="option1">Bahubali (SANJAY)</mat-option>
+                                            <mat-option value="option2">Kattapa (ANAS)</mat-option>
+                                            <mat-option value="option3">Kaalageyan(MASOOD)</mat-option>
+                                            <mat-option value="option4">Sudharsan</mat-option>
+                                            <mat-option value="option5">Meena</mat-option>
+                                            <mat-option value="option6">Sneha</mat-option>
+                                            <mat-option value="option7">Prince (GOPI)</mat-option>
+                                            <mat-option value="option8">Master (SANTHOSH)</mat-option>
+                                            <mat-option value="option9">DSK (DINESH)</mat-option>
+
+                                        </mat-select>
+                                    </mat-form-field>
+
+
+
+                                </form>
+                            </div>
+
+
+
+                            <div class=" card-footer">
+
+                                <button class=" btn btn-fill btn-danger" type="submit" (click)="toggle()" id="bt">
+                                    {{buttonName}}
+                                </button>
+                                <button class=" btn btn-fill btn-danger" type="submit" id="bt"
+                                    style="margin-left: 10%;">
+                                    Start
+                                </button>
+
+                                <button class=" btn btn-fill btn-danger" type="submit" id="bt" style="margin-left: 5%;">
+                                    Close
+                                </button>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin: 0 auto;text-align: left;">
+
+                    <!---->
+
+                </div>
+                <br>
+
+            </ng-container>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>

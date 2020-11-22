@@ -1,0 +1,345 @@
+<div class=" content">
+    <div class=" row">
+        <div class=" col-md-12">
+            <div class=" card" *ngIf="!show">
+                <div class=" card-header">
+                    <h4 class=" card-title">Urban Paper Table</h4>
+                </div>
+                <div class=" card-body">
+                    <div class=" table-responsive">
+                        <table class=" table tablesorter" id="">
+                            <thead class=" text-primary">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Is Active</th>
+
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dakota Rice</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        <span class="material-icons pointer" (click)="show = !show">
+                                            error
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Minerva Hooper</td>
+                                    <td>Yes</td>
+
+                                    <td>
+                                        <span class="material-icons pointer" (click)="show = !show">
+                                            error
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sage Rodriguez</td>
+                                    <td>Yes</td>
+
+                                    <td>
+                                        <span class="material-icons pointer" (click)="show = !show">
+                                            error
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Philip Chaney</td>
+                                    <td>Yes</td>
+
+                                    <td>
+                                        <span class="material-icons pointer" (click)="show = !show">
+                                            error
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Doris Greene</td>
+                                    <td>No</td>
+
+                                    <td>
+                                        <span class="material-icons pointer" (click)="show = !show">
+                                            error
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mason Porter</td>
+                                    <td>No</td>
+
+                                    <td>
+                                        <span class="material-icons pointer" (click)="show = !show">
+                                            error
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Jon Porter</td>
+                                    <td>No</td>
+
+                                    <td>
+                                        <span class="material-icons pointer" (click)="show = !show">
+                                            error
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info col-xl-12">
+
+            <ng-container *ngIf="show">
+
+                <div class=" row">
+                    <div class=" col-md-12">
+                        <div class=" card">
+                            <div class=" card-header" style="text-align: right;"><button mat-icon-button color="primary"
+                                    aria-label="edit icon" style="align-self: center;"
+                                    (click)="editprofile = !editprofile">
+                                    <span class="material-icons">
+                                        create
+                                    </span>
+                                </button></div>
+
+                            <div class=" card-body">
+                                <form>
+                                    <div class=" row">
+                                        <div class=" col-md-5 pr-md-1">
+                                            <div class=" form-group">
+                                                <label> Company</label>
+                                                <input [disabled]="editprofile" class=" form-control"
+                                                    placeholder="Company" type="text" value="" />
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-3 px-md-1">
+                                            <div class=" form-group">
+                                                <!--  <label> Username </label>
+                      <input
+                        class=" form-control"
+                        placeholder="Username"
+                        type="text"
+                        value="michael23"
+                      />-->
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-4 pl-md-1">
+                                            <div class=" form-group">
+                                                <!-- <label for="exampleInputEmail1"> Email address </label>
+                      <input
+                        class=" form-control"
+                        placeholder="mike@email.com"
+                        type="email"
+                      />-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" row">
+
+
+                                    </div>
+
+                                    <table class=" table tablesorter" id="">
+                                        <thead class=" text-primary">
+                                            <tr>
+                                                <th>Swiggy</th>
+                                                <th>Zomato</th>
+                                                <th>Dunzo</th>
+                                                <th>Amazon</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><mat-icon>check</mat-icon></td>
+                                                <td><mat-icon>check</mat-icon></td>
+                                                <td><mat-icon>close</mat-icon></td>
+                                                <td><mat-icon>close</mat-icon></td>
+                                            </tr>
+                                        
+                                        </tbody>
+                                    </table>
+
+                                    <div class=" row">
+                                        <div class=" col-md-4 pr-md-1">
+                                            <div class=" form-group">
+                                                <label> API Key </label>
+                                                <input [disabled]="editprofile" class=" form-control" placeholder="---"
+                                                    type="text" value="" />
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-4 pr-md-1">
+                                            <div class=" form-group">
+                                                <label> Username </label>
+                                                <input [disabled]="editprofile" class=" form-control" placeholder="---"
+                                                    type="text" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" row">
+                                        <div class=" col-md-6 pr-md-1">
+                                            <div class=" form-group">
+                                                <label> Quint Credentials </label>
+                                                <input [disabled]="editprofile" class=" form-control" placeholder="---"
+                                                    type="text" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+
+
+
+                            <div class=" card-footer">
+
+                                <button class=" btn btn-fill btn-danger" type="submit" (click)="toggle()" id="bt">
+                                    {{buttonName}}
+                                </button>
+                                <button class=" btn btn-fill btn-danger" type="submit" id="bt"
+                                    style="margin-left: 10%;">
+                                    Save
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin: 0 auto;text-align: left;">
+
+                    <!---->
+
+                </div>
+                <br>
+
+            </ng-container>
+        </div>
+
+
+        <div class="info col-xl-12">
+
+            <ng-container *ngIf="show">
+
+                <div class=" row">
+                    <div class=" col-md-12">
+                        <div class=" card">
+
+                     
+                            <div class=" card-header" style="text-align: left;"><button mat-icon-button color="primary"
+                                    aria-label="edit icon" style="align-self: center;"
+                                    (click)="editprofile = !editprofile">
+
+                                    <h1>
+                                        Web Hooks
+                                    </h1>
+                                   
+                                </button></div>
+
+                            <div class=" card-body">
+                                <form>
+                                 
+            
+
+                                    <table class=" table tablesorter" id="">
+                                        <thead class=" text-primary">
+                                            <tr>
+                                                <th>Event</th>
+                                                <th>Is Active</th>
+                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Stores create/update</td>
+                                                <td> <mat-checkbox class="example-margin" ></mat-checkbox></td>
+                                         
+                                            </tr>
+                                            <tr>
+                                                <td>Catalogue publish through API</td>
+                                                <td> <mat-checkbox class="example-margin" ></mat-checkbox></td>
+                                         
+                                            </tr>
+                                            <tr>
+                                                <td>Order placed</td>
+                                                <td> <mat-checkbox class="example-margin" ></mat-checkbox></td>
+                                         
+                                            </tr>
+                                            <tr>
+                                                <td>Item Stock In/Out</td>
+                                                <td> <mat-checkbox class="example-margin" ></mat-checkbox></td>
+                                         
+                                            </tr>
+                                            <tr>
+                                                <td>Order status update</td>
+                                                <td> <mat-checkbox class="example-margin" ></mat-checkbox></td>
+                                         
+                                            </tr>
+                                            <tr>
+                                                <td>Order delivery status</td>
+                                                <td> <mat-checkbox class="example-margin" ></mat-checkbox></td>
+                                         
+                                            </tr>
+                                        
+                                        </tbody>
+                                    </table>
+
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Choose an Web Hook</mat-label>
+                                        <mat-select>
+                                          <mat-option value="option1">User Feedback</mat-option>
+                                          <mat-option value="option2">Order placed</mat-option>
+                                          <mat-option value="option3">Order status update</mat-option>
+                                          <mat-option value="option3">Order delivery status</mat-option>
+                                          <mat-option value="option3">Catalogue publish through API</mat-option>
+                                          <mat-option value="option3">Stores create/update</mat-option>
+                                          <mat-option value="option3">Stores status change</mat-option>
+                                          <mat-option value="option3">Category timing groups create/update</mat-option>
+                                          <mat-option value="option3">Item Stock In/Out</mat-option>
+                                          <mat-option value="option3">Option Stock In/Out</mat-option>
+                                          <mat-option value="option3">Order Feature Action</mat-option>
+                                          <mat-option value="option3">Comet: Order Placed</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+
+                                      <button class=" btn btn-fill btn-danger" type="submit" id="bt"
+                                      style="margin-left: 2%;">
+                                      ADD
+                                  </button>
+
+                                    
+
+                         
+
+                                </form>
+                            </div>
+
+
+
+                
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin: 0 auto;text-align: left;">
+
+                    <!---->
+
+                </div>
+                <br>
+
+            </ng-container>
+        </div>
+
+
+
+    </div>
+</div>
