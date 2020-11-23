@@ -8,6 +8,7 @@ import { MaterialModule } from './material.module';
 import { AppComponent } from "./app.component";
 import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -28,7 +29,9 @@ import { AngularEditorModule } from "@kolkov/angular-editor";
     MaterialModule,
     AngularEditorModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    
+    
   ],
   declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent],
   providers: [],

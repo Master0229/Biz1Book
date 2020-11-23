@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild  } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-urbanpaper',
@@ -10,6 +11,7 @@ export class UrbanpaperComponent implements OnInit {
 
   public show:boolean = false;
   public buttonName:any = 'Back';
+  uptable:  any = [];
   
   hide=true;
   editprofile = true;
@@ -37,7 +39,8 @@ export class UrbanpaperComponent implements OnInit {
   
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private auth: AuthService
 
     
 
@@ -52,7 +55,17 @@ export class UrbanpaperComponent implements OnInit {
     this.dialog.open(this.secondDialog);
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getuptable();
+   }
+  
+   getuptable(){
+    this.auth.GetUPCompanies().subscribe(data => {
+      console.log(data);
+      this.uptable = data;
+      // this.issues = data;
+    })
+  }
 
   closealldialog(){
     this.dialog.closeAll()

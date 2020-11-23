@@ -17,6 +17,7 @@ import { PlansComponent } from "../../pages/plans/plans.component";
 import { UrbanpaperComponent } from "../../pages/urbanpaper/urbanpaper.component";
 import { MaterialModule } from "../../material.module";
 import { IssuesComponent } from "../../pages/issues/issues.component";
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -28,7 +29,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     FormsModule,
     HttpClientModule,
     NgbModule,
-    MaterialModule
+    MaterialModule,
+    
   ],
   declarations: [
     DashboardComponent,

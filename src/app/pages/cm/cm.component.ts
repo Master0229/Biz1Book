@@ -1,5 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AuthService } from 'src/app/auth.service';
+// import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
   selector: 'app-cm',
@@ -10,6 +12,7 @@ export class CmComponent{
 
   public show:boolean = false;
   public buttonName:any = 'Back';
+  Companies: any = [];
   
   hide=true;
   editprofile = true;
@@ -37,8 +40,9 @@ export class CmComponent{
   
 
   constructor(
-    private dialog: MatDialog
-
+    private dialog: MatDialog,
+    private auth: AuthService,
+    // private spinnerService: Ng4LoadingSpinnerService
     
 
 
@@ -52,8 +56,21 @@ export class CmComponent{
     this.dialog.open(this.secondDialog);
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    // this.spinnerService.show();
+    this.getcompanies();
 
+
+
+  }
+getcompanies(){
+    this.auth.GetCompany().subscribe(data => {
+      console.log(data);
+      this.Companies = data;
+      //this.spinnerService.hide()
+      // this.issues = data;
+    })
+  }
   closealldialog(){
     this.dialog.closeAll()
   }

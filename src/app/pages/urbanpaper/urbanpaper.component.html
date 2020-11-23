@@ -17,8 +17,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Dakota Rice</td>
+                                <tr  *ngFor="let Company of uptable">
+                                    <td>{{Company.Name}}</td>
                                     <td>Yes</td>
                                     <td>
                                         <span class="material-icons pointer" (click)="show = !show">
@@ -26,7 +26,7 @@
                                         </span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>Minerva Hooper</td>
                                     <td>Yes</td>
 
@@ -85,7 +85,7 @@
                                             error
                                         </span>
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>

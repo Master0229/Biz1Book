@@ -14,4 +14,10 @@ export class AuthService {
   getissues() {
     return this.http.get(this.base_url1 + "Issue/GetIssues");
   }
+  GetCompany(){
+    return this.http.get(this.base_url1 + "Company/GetAll");
+  }
+  GetUPCompanies(){
+    return this.http.get(this.base_url1 + "Company/GetUPCompanies")
+  }
 }

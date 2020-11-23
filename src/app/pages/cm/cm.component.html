@@ -1,3 +1,11 @@
+<!-- <div class="preloader-it">
+  <div class="lds-roller">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div> -->
 <div class=" content">
   <div class=" row">
     <div class=" col-md-12">
@@ -11,25 +19,39 @@
               <thead class=" text-primary">
                 <tr>
                   <th>Name</th>
-                  <th>Country</th>
-                  <th>Area</th>
-                  <th class=" text-center">Payments</th>
+                  <th>Address</th>
+                  <th>City</th>
+                  <th class=" text-center">State</th>
                   <th>Details</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td>Niger</td>
-                  <td>Oud-Turnhout</td>
-                  <td class=" text-center">$36,738</td>
+                <tr *ngFor="let Company of Companies">
+                  <td>{{Company.Name}}</td>
+                  <td>{{Company.Address}}</td>
+                  <td>{{Company.City}}</td>
+                  <td class=" text-center">{{Company.State}}</td>
                   <td>
                     <span class="material-icons pointer" (click)="show = !show">
                       error
                     </span>
                   </td>
                 </tr>
-                <tr>
+                <!-- <tr>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <div class="lds-roller">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr> -->
+                <!--<tr>
                   <td>Minerva Hooper</td>
                   <td>CuraÃ§ao</td>
                   <td>Sinaai-Waas</td>
@@ -94,9 +116,19 @@
                       error
                     </span>
                   </td>
-                </tr>
+                </tr>-->
               </tbody>
             </table>
+            <div *ngIf="Companies.length == 0" class="lds-roller">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -326,7 +358,8 @@
 
                         <ng-template #firstDialogTemplate>
                           <h2>1. This is the first template</h2>
-                          <app-dialog-button color="primary" (click)="changeDialogTemplate(secondDialogTemplate)">Go to
+                          <app-dialog-button color="primary" (click)="changeDialogTemplate(secondDialogTemplate)">Go
+                            to
                             Second Teamplate</app-dialog-button>
                         </ng-template>
 
