@@ -11,6 +11,7 @@ import { CmComponent } from "../../pages/cm/cm.component";
 import { PlansComponent } from "../../pages/plans/plans.component";
 import { UrbanpaperComponent } from "../../pages/urbanpaper/urbanpaper.component";
 import { IssuesComponent } from "../../pages/issues/issues.component";
+import { EmployeesComponent } from "../../pages/employees/employees.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
@@ -25,5 +26,6 @@ export const AdminLayoutRoutes: Routes = [
   { path: "plans", component: PlansComponent },
   { path: "urbanpaper", component: UrbanpaperComponent },
   { path: "issues", component: IssuesComponent },
+  { path: "employees", component: EmployeesComponent },
   // { path: "rtl", component: RtlComponent }
 ];

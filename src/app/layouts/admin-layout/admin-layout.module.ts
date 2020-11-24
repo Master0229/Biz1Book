@@ -15,6 +15,7 @@ import { TypographyComponent } from "../../pages/typography/typography.component
 import { CmComponent } from "../../pages/cm/cm.component";
 import { PlansComponent } from "../../pages/plans/plans.component";
 import { UrbanpaperComponent } from "../../pages/urbanpaper/urbanpaper.component";
+import { EmployeesComponent } from "../../pages/employees/employees.component";
 import { MaterialModule } from "../../material.module";
 import { IssuesComponent } from "../../pages/issues/issues.component";
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
@@ -44,6 +45,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     PlansComponent,
     UrbanpaperComponent,
     IssuesComponent,
+    EmployeesComponent,
     // RtlComponent
   ]
 })

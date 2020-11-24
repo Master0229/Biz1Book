@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from 'src/app/auth.service';
 // import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
