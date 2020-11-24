@@ -9,7 +9,7 @@ import { TablesComponent } from "../../pages/tables/tables.component";
 import { TypographyComponent } from "../../pages/typography/typography.component";
 import { CmComponent } from "../../pages/cm/cm.component";
 import { PlansComponent } from "../../pages/plans/plans.component";
-import { UrbanpaperComponent } from "../../pages/urbanpaper/urbanpaper.component";
+import { UrbanpiperComponent } from "../../pages/urbanpiper/urbanpiper.component";
 import { IssuesComponent } from "../../pages/issues/issues.component";
 import { EmployeesComponent } from "../../pages/employees/employees.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
@@ -24,7 +24,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "typography", component: TypographyComponent },
   { path: "cm", component: CmComponent },
   { path: "plans", component: PlansComponent },
-  { path: "urbanpaper", component: UrbanpaperComponent },
+  { path: "urbanpiper", component: UrbanpiperComponent },
   { path: "issues", component: IssuesComponent },
   { path: "employees", component: EmployeesComponent },
   // { path: "rtl", component: RtlComponent }

@@ -4,10 +4,10 @@ import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-urbanpaper',
-  templateUrl: './urbanpaper.component.html',
-  styleUrls: ['./urbanpaper.component.scss']
+  templateUrl: './urbanpiper.component.html',
+  styleUrls: ['./urbanpiper.component.scss']
 })
-export class UrbanpaperComponent implements OnInit {
+export class UrbanpiperComponent implements OnInit {
 
   public show:boolean = false;
   public buttonName:any = 'Back';

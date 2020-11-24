@@ -30,8 +30,8 @@ export const ROUTES: RouteInfo[] = [
     class: ""
   },
   {
-    path: "/urbanpaper",
-    title: "UrbanPaper",
+    path: "/urbanpiper",
+    title: "UrbanPiper",
 
     icon: "icon-puzzle-10",
     class: ""

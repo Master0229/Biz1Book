@@ -14,7 +14,7 @@ import { TablesComponent } from "../../pages/tables/tables.component";
 import { TypographyComponent } from "../../pages/typography/typography.component";
 import { CmComponent } from "../../pages/cm/cm.component";
 import { PlansComponent } from "../../pages/plans/plans.component";
-import { UrbanpaperComponent } from "../../pages/urbanpaper/urbanpaper.component";
+import { UrbanpiperComponent } from "../../pages/urbanpiper/urbanpiper.component";
 import { EmployeesComponent } from "../../pages/employees/employees.component";
 import { MaterialModule } from "../../material.module";
 import { IssuesComponent } from "../../pages/issues/issues.component";
@@ -43,7 +43,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     MapComponent,
     CmComponent,
     PlansComponent,
-    UrbanpaperComponent,
+    UrbanpiperComponent,
     IssuesComponent,
     EmployeesComponent,
     // RtlComponent

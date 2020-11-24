@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UrbanpaperComponent } from './urbanpaper.component';
+import { UrbanpiperComponent } from './urbanpiper.component';
 
 describe('UrbanpaperComponent', () => {
-  let component: UrbanpaperComponent;
-  let fixture: ComponentFixture<UrbanpaperComponent>;
+  let component: UrbanpiperComponent;
+  let fixture: ComponentFixture<UrbanpiperComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UrbanpaperComponent ]
+      declarations: [ UrbanpiperComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UrbanpaperComponent);
+    fixture = TestBed.createComponent(UrbanpiperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
